@@ -5,5 +5,5 @@ The purpose of this project is to develop a tool that converts regular expressio
 ##### **This project was a part of my undergraduate course CSE420 (Compiler Design)**
 ---
 
-## **Language & technologies used**
+## **Language used**
 * Python
