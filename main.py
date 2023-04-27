@@ -332,20 +332,3 @@ def checkString(myStr, dfa, root):
             return
     print("String Not Accepted")
     return
-
-re = "(a|b)*.a.b.b"
-regex = reToPostfix(re)
-augRe = re+".#"
-tree, root = build_syntax_tree(regex)
-null = nullable(tree, root)
-first = firstpos(tree, root)
-last = lastpos(tree, root)
-follow = followpos(tree)
-print("Tree:", tree,"\n")
-for node in tree:
-    print_node_info(tree, node)
-print("FollowPos:", follow,"\n")
-rootFirstPos = tree[root][2]
-dfa = create_DFA(follow,augRe,rootFirstPos)
-print("DFA:", dfa,"\n")
-checkString("abb", dfa, rootFirstPos)
